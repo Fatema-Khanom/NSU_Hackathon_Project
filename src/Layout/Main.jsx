@@ -1,12 +1,14 @@
 
 import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar/Navbar'
+import { StickyNavbar } from '../components/Navbar/Navbar'
+import { FooterWithSocialLinks } from '../components/Footer/Footer'
 
 const Main = () => {
   return (
-    <div>
-        <Navbar></Navbar>
-        <Outlet />
+    <div className='max-w-[1440px bg-[#F7ECFF]'>
+       <StickyNavbar></StickyNavbar>
+       <Outlet></Outlet>
+       <FooterWithSocialLinks> </FooterWithSocialLinks>
     </div>
   )
 }
